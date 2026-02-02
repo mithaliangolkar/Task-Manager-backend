@@ -25,6 +25,13 @@ cd backend
 npm install  
 npm run dev  
 
+## Run Server
+npm start
+
+## Server runs on:
+
+http://localhost:5000
+
 ---
 
 ## ⚙️ Frontend Setup
@@ -32,6 +39,9 @@ npm run dev
 cd frontend  
 npm install  
 npm start  
+
+## API Base URL
+http://localhost:5000/api/v1
 
 ---
 
