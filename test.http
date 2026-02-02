@@ -1,0 +1,74 @@
+### REGISTER
+POST http://localhost:5000/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "name": "Mithali",
+  "email": "mithali@test.com",
+  "password": "123456"
+}
+
+### LOGIN
+POST http://localhost:5000/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "mithali@test.com",
+  "password": "123456"
+}
+
+### PROTECTED ROUTE
+GET http://localhost:5000/api/v1/user/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODA4ODU5ZGVjZDZjZjc3M2I2MDUzZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzcwMDMxNTk3LCJleHAiOjE3NzAxMTc5OTd9.s28aN6IWLed3jKYNndWocHYG5-35wgjLsZKVu7oQ_0A
+
+### CREATE TASK
+POST http://localhost:5000/api/v1/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODA4ODU5ZGVjZDZjZjc3M2I2MDUzZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzcwMDMxNTk3LCJleHAiOjE3NzAxMTc5OTd9.s28aN6IWLed3jKYNndWocHYG5-35wgjLsZKVu7oQ_0A
+
+{
+  "title": "Learn Backend",
+  "description": "Complete internship assignment"
+}
+
+### UPDATE TASK
+PUT http://localhost:5000/api/v1/tasks/6980932271500e177f5baa49
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODA4ODU5ZGVjZDZjZjc3M2I2MDUzZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzcwMDMzNDAxLCJleHAiOjE3NzAxMTk4MDF9.zsYEL0akFO4HNl9c2hrwtGNlZHbIGS87c8rBrDM_bas
+
+{
+  "status": "completed"
+}
+
+### DELETE TASK
+DELETE http://localhost:5000/api/v1/tasks/6980928c71500e177f5baa44
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODA4ODU5ZGVjZDZjZjc3M2I2MDUzZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzcwMDMzNDAxLCJleHAiOjE3NzAxMTk4MDF9.zsYEL0akFO4HNl9c2hrwtGNlZHbIGS87c8rBrDM_bas
+
+### ADMIN DASHBOARD
+GET http://localhost:5000/api/v1/admin/dashboard
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODA4ODU5ZGVjZDZjZjc3M2I2MDUzZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzcwMDM0MTkxLCJleHAiOjE3NzAxMjA1OTF9.O6xX-3U9pwneCiOFpYLcosSxtAb6ssReDN099eKrG5c
+
+### REGISTER ADMIN USER
+POST http://localhost:5000/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "name": "Admin Mithali",
+  "email": "admin@test.com",
+  "password": "123456"
+}
+
+### LOGIN ADMIN USER
+POST http://localhost:5000/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@test.com",
+  "password": "123456"
+}
+
+### ADMIN DASHBOARD
+GET http://localhost:5000/api/v1/admin/dashboard
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODA5NjBhMDg5YTIxNTQ5MDFjODkxNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MDAzNDc2NiwiZXhwIjoxNzcwMTIxMTY2fQ.GuAuLFQdbOSVL73kv1oqkmbFoPouI5DiOLsdOs7ffmg
+
+
